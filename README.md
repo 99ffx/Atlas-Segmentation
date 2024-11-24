@@ -16,7 +16,9 @@ Align test images to a reference atlas (probabilistic atlas or manually selected
     <br>
     The transformation ensures spatial alignment of test images with the atlas, creating a consistent spatial representation.
 
-    ![Result from Elastix registration](elastix.png)
+<p>
+    <img src="elastix.png" width="512" />
+</p>
 
 **2. Probabilistic Atlas Construction**
 <br>
@@ -28,6 +30,8 @@ Compute a voxel-wise probability distribution for each tissue type (CSF, GM, WM)
 For each voxel in the atlas, calculate the probability of belonging to a specific tissue type based on label frequencies.
 <br>
 Normalize histograms across the dataset to ensure probabilities sum to 1.
+
+![p_atlas](p_atlas.png)
 
 **3. EM Algorithm for Segmentation**
 <br>
@@ -41,3 +45,4 @@ Tissue Model Initialization: Use precomputed intensity distributions from the at
 <br>
 Label Propagation Initialization: Use position information from the atlas.
 
+![result](result.png)
